@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody class=" flex flex-col overflow-y-scroll " style="height: 50vh;">
-                    <tr  v-for="applicant in filteredApplicants" :key="applicant.id" class="pr-4 flex w-full bg-grey-900 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600">
+                    <tr  v-for="(applicant,index ) in filteredApplicants" :key="index" class="pr-4 flex w-full bg-grey-900 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600">
                         <td class="p-4 w-1/4 ">{{applicant.id}} </td>     
                         <td class="p-4 w-1/4"> {{applicant.lastName}}</td> 
                         <td class="p-4 w-1/4">{{applicant.firstName}}</td>
@@ -93,7 +93,7 @@ computed:{
         return applicant.includes(searchTerm) || lastName.includes(searchTerm) ||  semester.includes(searchTerm)
         ||  programs.includes(searchTerm) ||  status.includes(searchTerm) 
       })
-    }
+    },
     
  },
     created() {

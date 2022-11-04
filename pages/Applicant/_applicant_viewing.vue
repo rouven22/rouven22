@@ -1,6 +1,6 @@
 <template>
   <div>
-    <StudentNavbar />
+    <ApplicantNavbar />
     <div class="flex justify-center items-center  bg-grey-200 ">
       <div class="w-1/2 bg-grey-50 rounded shadow-2xl p-20 m-2">
         <h1 class="block w-full text-center text-gray-600 text-2xl font-bold mb-6">APPLICANT APPLICATION</h1>

@@ -1,34 +1,34 @@
 
 
+import axios from 'axios';
+
 export const state = () => ({
    
-  applicants: [],
-  
+  applicants: []
 })
-export const getters = {
-    getApplicants: (state) => {
-      return state.applicants
-    }
-}
 
+
+export const actions = {
+   
+   getApplicants({commit}){
+    axios
+    .get('http://localhost:3000/applicants')
+    .then(data => {
+      console.log(data.data)
+      const applicants = data.data
+      commit('SET_APPLICANTS',applicants)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+},
+}
   export const mutations = {
-    SET_APPLICANTS(state, payload) {
-        state.applicants = payload
-    },
-    SET_LOADING(state, payload) {
-        state.applicants = payload
-    },
+    SET_APPLICANTS(state, applicants){
+    state.applicants = applicants
+   }
     
   }
-
-  export const actions = {
- 
-    async loadApplicants() {
-        const data = await fetch(`http://localhost:3000/applicants`);
-      this.applicants = await data.json();  
-    }
-
-}        
 
 
  

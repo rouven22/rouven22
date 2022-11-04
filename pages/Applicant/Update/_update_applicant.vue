@@ -1,7 +1,7 @@
 
 <template>  
   <div>
-          <StudentNavbar />
+          <ApplicantNavbar />
               <div class=" bg-white-400 rounded shadow-2xl p-20 ">
                   <div class="mt-10 sm:mt-0">
                   <div class="md:grid md:grid-cols-3 md:gap-6">
