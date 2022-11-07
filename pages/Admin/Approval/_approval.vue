@@ -494,7 +494,7 @@
                        <select id="screening"  v-model="screening" class="block appearance-none w-25 bg-white border border-gray-600 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                          <option>--</option>
                          <option>Endorse to GPMC</option>
-                         <option>Re-Submit</option>
+                         <option>Decline</option>
                          
                         
                        </select> 

@@ -1,7 +1,15 @@
 <template>
   <div>
-    <ApplicantNavbar />
-    <div class=" bg-white-400 rounded shadow-2xl p-20 ">
+
+              
+    <div class="flex justify-center items-center ">
+               <img src="https://amis.uplb.edu.ph/logos/uplb-logo.png" class="items-center mr-3 h-26 sm:h-26">
+               </div>
+               <h1 class="block w-full text-center text-gray-900 text-2xl font-bold">University of the Philippines Los Baños</h1>
+                <h2 class="block w-full text-center text-gray-900 text-1xl font-medium mb-4">Graduate School</h2>
+                <h2 class="block w-full text-center text-gray-900 text-1xl">College, Laguna, 4031, Philippines</h2>
+    <div class=" rounded shadow-2xl p-20 ">
+        
       <div class="mt-10 sm:mt-0">
         <div class="md:grid md:grid-cols-3 md:gap-6">
           <div class="md:col-span-1">
@@ -304,14 +312,7 @@
 
 </div>
 </div>
-
-
-
-
-
-                     
-                        
-                       
+                 
                   <div>
                     <label class="font-bold block mb-2 text-sm text-gray-900 dark:text-gray-900">9. Future plans after completion of graduate studies at the University of the Philippines Los Baños</label>
                     <textarea id="future_plans" v-model="futurePlans" class=" text-gray-700 bg-white bg-clip-padding border border-solid border-gray-600 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none resize-none px-2 py-3 w-full h-50" placeholder=""></textarea>

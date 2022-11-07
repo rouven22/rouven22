@@ -8,10 +8,14 @@
             </div>
 
             <div class="flex justify-between pb-4 bg-white">
-           
+              <button
+                type="button" class="ml-6 px-6 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase hover:bg-green-700 focus:bg-green-700 focus:outline-none focus:ring-0 active:bg-green-800 transition duration-150 ease-in-out" 
+                @click="showModal = true">  ADD APPLICANT  </button>
 
             <div class="inset-y-0 right-24 pr-24 pointer-events-none">
+           
             </div>
+            
             <div class="pr-20"> 
              <input
                 id="search" v-model="search" type="text" class="form-control relative block 
@@ -53,18 +57,24 @@
                     </td>         
                     </tr>
                 </tbody>
-            </table>    
+            </table>  
+             <AdminFormModal  v-show="showModal" @close-modal="showModal = false"  />  
     </div>
   </template>
   <script>      
-                
+  import AdminFormModal from '~/components/AdminFormModal.vue'
+  
  export default {
     name: "AdminDashboard",
+  components:{
+    AdminFormModal
+  },
     data() {
 return {
             applicants: [],  
               search:'',
               sortedbyASC: true,
+               showModal: false,
         
     };
 },

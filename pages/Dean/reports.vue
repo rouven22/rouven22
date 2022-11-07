@@ -89,41 +89,41 @@
       <div class=" max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-white dark:border-white dark:hover:bg-white">
          <div class="p-4">
           <h2 class="text-center mb-2 text-2xl font-bold tracking-tight text-red-900 dark:text-red-900">
-            Not Admitted
+            Not Admitted Applicants
           </h2>
           <p class="font-normal text-gray-700 dark:text-red-900 text-center">30</p>
         </div>
       </div>
     </div>
-            </div>
-            </div>
-             <div>
-            <label class="ml-20"> Turnaround Time</label>
-            </div>
+     <div class="flex-1 p-4">
+      <div class=" max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-white dark:border-white dark:hover:bg-white">
+         <div class="p-4">
+          <h2 class="text-center mb-2 text-2xl font-bold tracking-tight text-red-900 dark:text-red-900">
+            Average GS Screening Time
+          </h2>
+          <p class="font-normal text-gray-700 dark:text-red-900 text-center">3 days</p>
+        </div>
+      </div>
+    </div>
 
- <div class="items-center container inline-block ">
+     
+            </div>
+            </div>
+            <div class="container inline-block ">
   <div class="flex">
     <div class="flex-1 p-4">
       <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-white dark:border-white dark:hover:bg-white">
         <div class="p-4">
           <h2 class="text-center mb-2 text-2xl font-bold tracking-tight text-red-900 dark:text-red-900">
-            Average GS Screening time
+            Average Unit Evaluation and Endorsement time
           </h2>
           <p class="font-normal text-gray-700 dark:text-red-900 text-center">3 days</p>
         </div>
       </div>
     </div>
-
-    <div class="flex-1 p-4">
-      <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-white dark:border-white dark:hover:bg-white">
-        <div class="p-4">
-          <h2 class="text-center mb-2 text-2xl font-bold tracking-tight text-red-900 dark:text-red-900">
-            Average Unit Evaluation and Endorsement Time
-          </h2>
-          <p class="font-normal text-gray-700 dark:text-red-900 text-center">3 days</p>
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
+    
   </div>
   </div>
 
@@ -132,8 +132,7 @@
             </div>  
             </div>
 
-            </div>
-            </div>            
+                       
                          
    
             </template>

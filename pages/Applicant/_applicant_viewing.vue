@@ -6,40 +6,10 @@
         <h1 class="block w-full text-center text-gray-600 text-2xl font-bold mb-6">APPLICANT APPLICATION</h1>
         <div class="px-12 max-w-5xl">
           <div>
-            <dl>
-              <div class="sm:grid sm:grid-cols-3 sm:gap-4">
-                <dt class="text-sm leading-5 font-medium text-gray-700">
-                  Status:
-                </dt>
-                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                  {{ applicant.Status }}
-                </dd>
-              </div>
-               <div class="mt-8 sm:grid sm:mt-5 sm:grid-cols-3 sm:gap-4 sm:border-t sm:border-gray-200 sm:pt-5">
-                <dt class="text-sm leading-5 font-medium text-gray-700">
-                  Condition:
-                </dt>
-                <dd class="pb-8 mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                  {{ applicant.Condition }}  
-                </dd>
-              </div>
-              <div class="mt-8 sm:grid sm:mt-5 sm:grid-cols-3 sm:gap-4 sm:border-t sm:border-gray-200 sm:pt-5">
-                <dt class="text-sm leading-5 font-medium text-gray-700">
-                  Remarks:
-                </dt>
-                <dd class="pb-8 mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                  {{ applicant.gpmcRemarks }}
-                </dd>
-              </div>
-             <div class="mt-8 sm:grid sm:mt-5 sm:grid-cols-3 sm:gap-4 sm:border-t sm:border-gray-200 sm:pt-5">
-                <dt class="text-sm leading-5 font-medium text-gray-700">
-                  Temporary Adviser:
-                </dt>
-                <dd class="pb-8 mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                 {{ applicant.selectedAdviser }}
-                </dd>
-              </div>
-            </dl>
+           <nuxt-link :to="`/applicant/Notice/${applicant.id}`">
+            <button  type="button" class="inline-block mb-6 px-6 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase hover:bg-green-700 focus:bg-green-700 focus:outline-none focus:ring-0 active:bg-green-800 transition duration-150 ease-in-out" >
+                        Notice of Admission  </button> </nuxt-link>
+           
             <div class="flex-grow h-px bg-red-900"></div>
           </div>
           <h1 class="pt-8 font-bold">Personal Information</h1>
