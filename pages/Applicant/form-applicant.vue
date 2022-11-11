@@ -10,7 +10,7 @@
             </div>
           </div>
           <div class="mt-5 md:col-span-2 md:mt-0">
-            <form id="f-1" action="">
+            <form method="POST" enctype="multipart/form-data">
               <div class=" pb-24 overflow-hidden shadow sm:rounded-md">
                 <div class="bg-grey-800 px-4 py-5 sm:p-6">
                   <label class="font-bold block mb-2 text-sm text-gray-900 dark:text-gray-900">First name</label>
@@ -104,7 +104,7 @@
             </div>
           </div>
           <div class="mt-5 md:col-span-2 md:mt-0">
-            <form action="/" method="post">
+            <form method="POST" enctype="multipart/form-data">
               <div class="overflow-hidden shadow sm:rounded-md">
                 <div class="bg-white px-4 py-5 sm:p-6">
                   <div>
@@ -300,18 +300,8 @@
                       </select>
                       </div>
 
-                  
-
-</div>
-</div>
-
-
-
-
-
-                     
-                        
-                       
+            </div>
+            </div>           
                   <div>
                     <label class="font-bold block mb-2 text-sm text-gray-900 dark:text-gray-900">9. Future plans after completion of graduate studies at the University of the Philippines Los Baños</label>
                     <textarea id="future_plans" v-model="futurePlans" class=" text-gray-700 bg-white bg-clip-padding border border-solid border-gray-600 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none resize-none px-2 py-3 w-full h-50" placeholder=""></textarea>
@@ -1227,454 +1217,454 @@
             </div>
           </div>
           <div class="mt-5 md:col-span-2 md:mt-0">
-            <form action="/" method="post">
+            <form method="POST" enctype="multipart/form-data">
               <div class="px-4 overflow-hidden shadow sm:rounded-md">
                 <dt class="mt-8 text-sm leading-2 font-medium text-red-700">
                   *PDF Files Only
                 </dt>
                 <div v-if="typeApplication === 'International'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">International English Language (TOEFL):</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">BS Diploma:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()" />
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">BS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs === 'Phd of Philosophy in Agricultural Chemistry'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()" />
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Agricultural Economics'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Agricultural Education'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()" />
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Agricultural Engineering'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Agronomy'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Animal Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Applied Mathematics'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Biochemistry'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Botany'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Computer Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Community Development'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Development Communication'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Entomology'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Development Studies'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Research Proposal</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Environmental Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Concept Note</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Extension Education'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Food Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Forestry: Forest Biological Sciences'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Forestry: Forest Resources Management'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Forestry: Silviculture and Forest Influences'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Forestry: Wood Science and Technology'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Genetics'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs === 'Phd of Philosophy in Horticulture'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Human Nutrition'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Microbiology'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Molecular Biology and Biotechnology'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Plant Breeding'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Plant Pathology'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Soil Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Phd of Philosophy in Statistics'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Straight PhD in Agricultural Economics'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Straight PhD in Development Communication'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Straight PhD in Environmental Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Concept Note</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'Straight PhD in Soil Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Agribusiness Management and Entrepreneurship'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Agricultural and Applied Economics'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Agronomy'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" />
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Animal Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Botany'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Computer Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Development Communication'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Economics'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Entomology'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Environmental Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                 <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                    <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                   <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Horticulture'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()" />
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()" />
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Plant Breeding'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()" />
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()" />
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Plant Pathology'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()" />
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()" />
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()" />
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()" />
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Soil Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()" />
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()" />
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()" />
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()" />
                 </div>
                 <div v-else-if="programs === 'PhD by Research in Forestry: Forest Biological Sciences'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Diploma</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">MS Transcipt of Record:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Certification from the immediate head of the agency that the applicant has at least five (5) years of satisfactory research experience:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Reprints or copies of the applicant's research outputs:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">A research proposal which shall include the title, rationale, objectives, methodology, and references:</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs === 'Phd of Philosophy in Human Nutrition'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Abstract of Research Interest</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs === 'Master of Professional Studies in Food Engineering'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Letter of Application</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Essay</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Curriculum Vitae</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Endorsement Letter From current supervisor if the applicant is employed</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs == 'Master in Applied Nutrition'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900"> Abstract of Research Interest</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs == 'Master of Science in Environmental Science'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900">Concept Note</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs == 'Master of Science in Applied Nutrition'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900"> Abstract of Research Interest</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs == 'Master in Development Management and Governance'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900"> Essay 1 Personal Statement</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900"> Essay 2 Research Interest</label>
-                  <input id="files" ref="files" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf" @change="handleFileUpload()"/>
                 </div>
                 <div v-if="programs == 'Master of Science in Development Management and Governance'">
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900"> Essay 1 Personal Statement</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900"> Essay 2 Research Interest</label>
-                  <input id="files" ref="files" type="file" accept=".pdf"  @change="handleFileUpload()"/>
+                  <input id="file" ref="file" type="file" accept=".pdf"  @change="handleFileUpload()"/>
                 </div>
                 <div>
                   <label for="file" class="pt-8 mb-2 font-bold block text-sm text-gray-900 dark:text-gray-900"> Payment:</label>
-                  <input id="files" ref="files" class="mb-8" type="file" accept=".pdf" @change="handleFileUpload()"/>
+                  <input id="file" ref="file" class="mb-8" type="file" accept=".pdf" @change="handleFileUpload()"/>
                 </div>
                
                 <div>
@@ -1702,12 +1692,10 @@
 </template>
  <script>
 
-
 export default { 
   name:"FormPage",
 data() {
       return{
-       showModal: false,
       programs: '',
       firstName:'',
       middleName:'',
@@ -1762,8 +1750,10 @@ data() {
       nameRecommendation3:'',
       addressRecommendation3:'',
       emailReco3:'',
+       file: null,
       showReco3:false,
-      files: '',
+       showModal: false,
+     
   
       }
 },
@@ -1792,15 +1782,12 @@ head() {
     // }
     // },
   methods:{
-submitAdd()
+ submitAdd()
 {
-  const formData = new FormData();
-       
-        for( let i = 0; i < this.files.length; i++ ){
-          const file = this.files[i];
-          formData.append('files[' + i + ']', file);
-        }
-const applicants = {
+ const formData = new FormData();
+ formData.append('file', this.file);
+ 
+  const applicants = {
      firstName:this.firstName,
       middleName:this.middleName,
       lastName:this.lastName,
@@ -1858,7 +1845,7 @@ const applicants = {
     }
 
     this.showModal = true 
-
+    formData.append('formData',applicants)
     fetch('http://localhost:3000/applicants', {
         method: 'POST',
         headers: { 
@@ -1868,14 +1855,13 @@ const applicants = {
     })
 },
 handleFileUpload(){
-        const uploadedFiles = this.$refs.files.files;
-        
-        for( let i = 0; i < uploadedFiles.length; i++ ){
-          this.files.push( uploadedFiles[i] );
-        }
-      },
+  this.file = this.$refs.file.files[0];
+
+  console.log(this.file)
 }
 }
+}
+
 </script>
 
 

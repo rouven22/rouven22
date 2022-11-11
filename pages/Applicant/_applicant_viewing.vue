@@ -480,7 +480,6 @@ import TransactionHistory from '../../components/TransactionHistory.vue';
     },
     async asyncData({ params }) {
         return await axios.get(`http://localhost:3000/applicants/${params.applicant_viewing}`).then(res => {
-            
             return { applicant: res.data };
         });
     },

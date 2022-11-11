@@ -95,6 +95,7 @@
 <NuxtLink   to='/applicant/applicant-requirement' >Apply for Admission</NuxtLink>
           </span>
           
+          
           <!-- END APPLY FOR NEW ADMISSON -->
           <!-- LOGOUT -->
           <span

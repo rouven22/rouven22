@@ -71,7 +71,7 @@
   },
     data() {
 return {
-            applicants: [],  
+           
               search:'',
               sortedbyASC: true,
                showModal: false,
@@ -92,6 +92,9 @@ return {
     },
  
 computed:{
+   applicants() {
+      return this.$store.state.applicants;
+    },
     filteredApplicants() {
       const searchTerm = (this.search || "").toLowerCase()
       return this.applicants.filter(function(item) {
@@ -106,14 +109,12 @@ computed:{
     },
     
  },
-    created() {
-    this.loadApplicants();
+ mounted() {
+    this.$store.dispatch("fetchApplicants");
   },
+    
 methods: {
-    async loadApplicants() {
-      const data = await fetch(`http://localhost:3000/applicants`);
-      this.applicants = await data.json();  
-    },
+   
     sortList(sortBy) {
       if (this.sortedbyASC) {
         this.applicants.sort((x, y) => (x[sortBy] > y[sortBy] ? -1 : 1));

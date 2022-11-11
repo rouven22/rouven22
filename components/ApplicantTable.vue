@@ -13,7 +13,7 @@
                     </tr>
                 </thead>
                 <tbody class=" flex flex-col overflow-y-scroll " style="height: 50vh;">
-                    <tr  v-for="applicant in applicants" :key="applicant.id" :applicant="applicant" class="pr-4 flex w-full bg-grey-900 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600"> 
+                    <tr  v-for="applicant in applicants" :key="applicant.id"  class="pr-4 flex w-full bg-grey-900 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-500 dark:hover:bg-gray-600"> 
                         <td class="p-4 w-1/4">{{applicant.id}} </td>     
                         <td class="p-4 w-1/4"> {{applicant.lastName}}</td> 
                         <td class="p-4 w-1/4">{{applicant.firstName}}</td>
@@ -44,11 +44,7 @@
  export default {
     name: "StudentDashboard",
     
-    data() {
-        return {
-           applicants: []
-        };
-    },
+   
     head() {
         return {
             title: "Applicant Dashboard",
@@ -61,17 +57,15 @@
             ]
         };
     },
-
-   created() {
-    this.loadApplicants();
+ computed: {
+    applicants() {
+      return this.$store.state.applicants;
+    }
   },
-methods: {
-    async loadApplicants() {
-      const data = await fetch(`http://localhost:3000/applicants`);
-      this.applicants = await data.json();  
-    },
-   
- }
+  mounted() {
+    this.$store.dispatch("fetchApplicants");
+  }
+
 };
                 </script>
                 
